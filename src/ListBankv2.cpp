@@ -22,6 +22,7 @@ void ListsBanks() {
 
     //Close text file
     inFS.close();
+    cout << "-----------------------------------" << endl;
     cout << "<End of Text File>" << endl;
 }
 
