@@ -16,7 +16,7 @@ void ListsBanks() {
     cout<<"List of Banks Available:"<<endl;
 
     //Repeatedly output the bank name until at the end of the file
-    while(inFS >> currentBank) {           
+    while(getline(inFS, currentBank)) {           
         cout<<currentBank<<endl;
     }
 
