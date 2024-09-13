@@ -14,7 +14,7 @@ void ListsBanks() {
     }
 
     cout<<"List of Banks Available:"<<endl;
-    cout << "-----------------------------------" << endl;
+    cout << "----------------------------------------------------------------------------------" << endl;
 
     //Repeatedly output the bank name until at the end of the file
     while(getline(inFS, currentBank)) {           
@@ -23,7 +23,7 @@ void ListsBanks() {
 
     //Close text file
     inFS.close();
-    cout << "-----------------------------------" << endl;
+    cout << "----------------------------------------------------------------------------------" << endl;
 }
 
 int main() {
