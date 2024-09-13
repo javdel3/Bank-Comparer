@@ -1,5 +1,5 @@
-#ifndef HEADER_TEXT_DISPLAY
-#define HEADER_TEXT_DISPLAY
+#ifndef HEADER_FILES
+#define HEADER_FILES
 
 void PrintDisplay();
 void ListBanks();
