@@ -1,3 +1,4 @@
+#include "headers.h"
 #include <fstream>
 #include <string>
 #include <iostream>
@@ -24,9 +25,4 @@ void ListsBanks() {
     //Close text file
     inFS.close();
     cout << "----------------------------------------------------------------------------------" << endl;
-}
-
-int main() {
-    ListsBanks();
-    return 0;
 }

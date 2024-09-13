@@ -1,6 +1,5 @@
 #include <iostream>
 #include "headers.h"
-#include "ListBankv2.cpp"
 using namespace std;
 
 class Bank {
@@ -14,5 +13,10 @@ void Greet() {
 
 int main() {
   Greet();
-  //ListBanks();
+  cout<<endl;
+  PrintDisplay();
+  cout<<endl;
+  ListBanks();
+  cout<<endl;
+  return 0;
 }
