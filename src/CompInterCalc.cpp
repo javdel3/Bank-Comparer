@@ -7,6 +7,7 @@ using namespace std;
 
 double CalcMoney(double apy, int userCompYears, double principle) {
     double result = 0.00;
+    int compFreqNum = 1;
 
     //vars for loop
     string compFreq = "";
@@ -40,31 +41,31 @@ double CalcMoney(double apy, int userCompYears, double principle) {
         cin>>compFreq;
         
         if(compFreq == "Daily") {
-            userCompYears = userCompYears*365;
+            compFreqNum = 365;
             isCorrectChoice = true;
         }
         else if(compFreq == "Weekly") {
-            userCompYears = userCompYears*52;
+            compFreqNum = 52;
             isCorrectChoice = true;
         }
         else if(compFreq == "Biweekly") {
-            userCompYears = userCompYears*26;
+            compFreqNum = 26;
             isCorrectChoice = true;
         }
         else if(compFreq == "Monthly") {
-            userCompYears = userCompYears*12;
+            compFreqNum = 12;
             isCorrectChoice = true;
         }
         else if(compFreq == "Quarterly") {
-            userCompYears = userCompYears*4;
+            compFreqNum = 4;
             isCorrectChoice = true;
         }
         else if(compFreq == "Semi-annually") {
-            userCompYears = userCompYears*2;
+            compFreqNum = 2;
             isCorrectChoice = true;
         }
         else if(compFreq == "Annually") {
-            userCompYears = userCompYears*1;
+            compFreqNum = 1;
             isCorrectChoice = true;
         }
         else {
@@ -73,7 +74,7 @@ double CalcMoney(double apy, int userCompYears, double principle) {
     }
     
     //Formula to calculate total money
-    result = principle * pow((1 + apy / 100), userCompYears); 
+    result = principle * pow((1 + apy / compFreqNum), compFreqNum * userCompYears); 
 
     //Display the total money
     cout << fixed << setprecision(2);
