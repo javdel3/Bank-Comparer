@@ -13,21 +13,10 @@ double CalcMoney(double apy, int userCompYears, double principle) {
     string compFreq = "";
     bool isCorrectChoice = false;
 
-    //User enters how many times the interest is compounded
-    cout<<"Choose the Compound Frequency: "<<endl;
-        cout<<"-------------------------------"<<endl;
-        cout<<"Daily"<<endl;
-        cout<<"Weekly"<<endl;
-        cout<<"Biweekly"<<endl;
-        cout<<"Monthly"<<endl;
-        cout<<"Quarterly"<<endl;
-        cout<<"Semi-annually"<<endl;
-        cout<<"Annually"<<endl;
-
-    cin>>compFreq;
-
     //Ensure valid selection and prep for calculation
     while(isCorrectChoice == false) {
+
+        //User enters how many times the interest is compounded
         cout<<"Choose the Compound Frequency: "<<endl;
         cout<<"-------------------------------"<<endl;
         cout<<"Daily"<<endl;
@@ -38,6 +27,7 @@ double CalcMoney(double apy, int userCompYears, double principle) {
         cout<<"Semi-annually"<<endl;
         cout<<"Annually"<<endl;
 
+        //User enters selection
         cin>>compFreq;
         
         if(compFreq == "Daily") {
@@ -78,15 +68,17 @@ double CalcMoney(double apy, int userCompYears, double principle) {
 
     //Display the total money
     cout << fixed << setprecision(2);
-        //cout << "Total Money after " << userCompYears << " years: $" << result << endl;
+    cout << "Total Money after " << userCompYears << " years: $" << result << endl;
 
     //return result;
 }
 
 int main(){
-    double apy = 4.25;
+    double apy = 4.25 / 100;
     double princ = 8377.14;
     int yrs = 10;
-    cout<< "Total Money: "<< CalcMoney(apy, yrs, princ)<<endl;
+    
+    CalcMoney(apy, yrs, princ);
+
     return 0;
 }
