@@ -4,7 +4,11 @@ using namespace std;
 
 class Bank {
     public:
-        Bank(string name);
+        string name;
+        double apy;
+    private:
+        double CalcMoney();
+        double balance;
 };
 
 void Greet() {
