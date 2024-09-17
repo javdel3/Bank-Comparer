@@ -5,8 +5,9 @@
 #include <iomanip>
 using namespace std;
 
+double result = 0.00;
+
 double CalcMoney(double apy, int userCompYears, double principle) {
-    double result = 0.00;
     int compFreqNum = 1;
 
     //vars for loop
@@ -26,9 +27,12 @@ double CalcMoney(double apy, int userCompYears, double principle) {
         cout<<"Quarterly"<<endl;
         cout<<"Semi-annually"<<endl;
         cout<<"Annually"<<endl;
+        cout<<endl;
 
         //User enters selection
+        cout<<"Enter Selection: ";
         cin>>compFreq;
+        cout<<endl;
         
         if(compFreq == "Daily") {
             compFreqNum = 365;
@@ -60,6 +64,7 @@ double CalcMoney(double apy, int userCompYears, double principle) {
         }
         else {
             cout<<"--- Invalid Selection. Please enter one of the choices provided above. ---"<<endl;
+            cout<<endl;
         }
     }
     
@@ -70,15 +75,17 @@ double CalcMoney(double apy, int userCompYears, double principle) {
     cout << fixed << setprecision(2);
     cout << "Total Money after " << userCompYears << " years: $" << result << endl;
 
-    //return result;
+    //return result; *** Incorpate return so no WARNING ***
 }
 
 int main(){
     double apy = 4.25 / 100;
     double princ = 8377.14;
-    int yrs = 10;
+    int yrs = 2;
     
     CalcMoney(apy, yrs, princ);
+
+    cout<<"Interest earned after " << yrs << "years: $" << result - princ << endl;
 
     return 0;
 }
