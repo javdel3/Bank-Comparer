@@ -11,16 +11,10 @@ class Bank {
         double balance;
 };
 
-void Greet() {
-    cout << "Welcome!" << endl;
-}
-
 int main() {
-  Greet();
-  cout<<endl;
-  PrintDisplay();
+  PrintStartDisplay();
   cout<<endl;
   ListBanks();
   cout<<endl;
-  return 0;
+  PrintEndDisplay();
 }
