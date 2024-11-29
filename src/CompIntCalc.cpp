@@ -75,7 +75,7 @@ double CalcMoney(double apy, int userCompYears, double principle) {
     cout << fixed << setprecision(2);
     cout << "Total Money after " << userCompYears << " years: $" << result << endl;
 
-    //return result; *** Incorpate return so no WARNING ***
+    return result;
 }
 
 int main(){
