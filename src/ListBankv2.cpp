@@ -5,7 +5,7 @@
 using namespace std;
 
 void ListBanks() {
-    ifstream inFS("100BankList"); //Specify text file to open
+    ifstream inFS("UserBankList"); //Specify text file to open
     string currentBank;    //Hold the name of the current bank being displayed from the file
 
     //Check if file correctly opened
