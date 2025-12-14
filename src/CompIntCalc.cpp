@@ -5,9 +5,8 @@
 #include <iomanip>
 using namespace std;
 
-double result = 0.00;
-
 double CalcMoney(double apy, int userCompYears, double principle) {
+    double result = 0.00; //Initialize to 0
     int compFreqNum = 1;
 
     //vars for loop
@@ -74,18 +73,7 @@ double CalcMoney(double apy, int userCompYears, double principle) {
     //Display the total money
     cout << fixed << setprecision(2);
     cout << "Total Money after " << userCompYears << " years: $" << result << endl;
+    cout << "Interest earned after " << userCompYears << "years: $" << result - princ << endl;
 
     return result;
-}
-
-int main(){
-    double apy = 4.25 / 100;
-    double princ = 8377.14;
-    int yrs = 2;
-    
-    CalcMoney(apy, yrs, princ);
-
-    cout<<"Interest earned after " << yrs << "years: $" << result - princ << endl;
-
-    return 0;
 }

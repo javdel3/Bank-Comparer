@@ -3,7 +3,7 @@
 
 void PrintStartDisplay();
 void ListBanks();
-//double CalcMoney(double apy, int userCompYears, double principle)
+double CalcMoney(double apy, int userCompYears, double principle);
 void PrintEndDisplay();
 
 #endif
