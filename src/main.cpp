@@ -41,6 +41,7 @@ int main() {
     }
 
     cout << "---Invalid input. Please enter only positive numbers.---" << endl;
+    cout << "To begin enter the Principle going to be used to compare between both Banks: ";
 
     //Clear the error flags on the cin stream
     cin.clear();
@@ -58,6 +59,7 @@ int main() {
     }
 
     cout << "---Invalid input. Please enter only positive numbers.---" << endl;
+    cout << "Please enter the Number of Years you plan to invest the money: ";
 
     //Clear the error flags on the cin stream
     cin.clear();
@@ -97,6 +99,8 @@ int main() {
     }
 
     cout << "---Invalid input. Please enter only positive numbers.---" << endl;
+    cout<<"Enter the APY advertised for " << user_Bank1.name << " :" << endl;
+    cout<<"(Please enter only a number. Do NOT express as a precentage. Ex. enter 3.50)"<<endl;
 
     //Clear the error flags on the cin stream
     cin.clear();
@@ -134,6 +138,8 @@ int main() {
     }
 
     cout << "---Invalid input. Please enter only positive numbers.---" << endl;
+    cout<<"Enter the APY advertised for " << user_Bank2.name << " :" << endl;
+    cout<<"(Please enter only a number. Do NOT express as a precentage. Ex. enter 3.50)"<<endl;
 
     //Clear the error flags on the cin stream
     cin.clear();
