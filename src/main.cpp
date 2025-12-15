@@ -54,7 +54,7 @@ int main() {
     //Check for valid inputs
   while (true) {
     //Attempt to read an integer
-    if (cin >> user_numYearsWithBanks) {
+    if (cin >> user_numYearsWithBanks && user_numYearsWithBanks > 0) {
         //Successfully read a number so break the loop
         break;
     } else {
@@ -94,7 +94,7 @@ int main() {
     //Check for valid inputs
   while (true) {
     //Attempt to read a double
-    if (cin >> user_Bank1.apy && ususer_Bank1.apy > 0.00) {
+    if (cin >> user_Bank1.apy && user_Bank1.apy > 0.00) {
         //Successfully read a number so break the loop
         break;
     } else {
@@ -117,7 +117,7 @@ int main() {
     //Check valid input
   while(true) {
     if(!isValidBankName) {
-      cout<<"Enter a valid name for bank 1 from the list above: ";
+      cout<<"Enter a valid name for bank 2 from the list above: ";
       cin >> user_Bank2.name;
     }
     else {
@@ -132,7 +132,7 @@ int main() {
     //Check for valid inputs
   while (true) {
     //Attempt to read a double
-    if (cin >> user_Bank2.apy && ususer_Bank2.apy > 0.00) {
+    if (cin >> user_Bank2.apy && user_Bank2.apy > 0.00) {
         //Successfully read a number so break the loop
         break;
     } else {
@@ -160,4 +160,6 @@ int main() {
   cout<<endl;
   PrintEndDisplay();
   cout<<endl;
+
+  return 0;
 }
