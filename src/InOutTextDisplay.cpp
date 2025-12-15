@@ -11,4 +11,5 @@ void PrintEndDisplay() {
 void PrintStartDisplay() {
     cout << "-----------------------------------------------------" << endl;
     cout << "Welcome!" << endl;
+    cout << "This program will compare two banks and show the amount of money you will accumulate over time." << endl;
 }

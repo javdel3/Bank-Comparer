@@ -7,7 +7,7 @@ using namespace std;
 
 double CalcMoney(double apy, int userCompYears, double principle) {
     double result = 0.00; //Initialize to 0
-    int compFreqNum = 1;
+    int compFreqNum = 1; //Initialize to 1
 
     //vars for loop
     string compFreq = "";
@@ -73,7 +73,7 @@ double CalcMoney(double apy, int userCompYears, double principle) {
     //Display the total money
     cout << fixed << setprecision(2);
     cout << "Total Money after " << userCompYears << " years: $" << result << endl;
-    cout << "Interest earned after " << userCompYears << "years: $" << result - princ << endl;
+    cout << "Interest earned after " << userCompYears << "years: $" << result - principle << endl;
 
     return result;
 }
