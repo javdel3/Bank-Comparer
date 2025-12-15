@@ -34,7 +34,7 @@ bool CheckValidBankName (string user_BankName) {
     //Check if file correctly opened
     if(!inFS.is_open()) {
         cout<<"Unable to open file"<<endl;
-        return;
+        return false;
     }
 
     while(getline(inFS, validBankName)) {
