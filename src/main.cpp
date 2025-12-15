@@ -7,13 +7,13 @@ using namespace std;
 class Bank {
   public:
     string name;
-    unsigned double apy;
-    unsigned double totalMoneyEarned;
+    double apy;
+    double totalMoneyEarned;
 };
 
 int main() {
   //Variables for user input
-  unsigned double user_principle = 0.00;
+  double user_principle = 0.00;
   unsigned int user_numYearsWithBanks = 0;
   bool isValidBankName = false;
   //Create objects for each bank
@@ -36,7 +36,7 @@ int main() {
     //Check for valid inputs
   while (true) {
     //Attempt to read a double
-    if (cin >> user_principle) {
+    if (cin >> user_principle && user_principle > 0.00) {
         //Successfully read a number so break the loop
         break;
     } else {
@@ -93,8 +93,8 @@ int main() {
   cout<<"(Please enter only a number. Do NOT express as a precentage. Ex. enter 3.50)"<<endl;
     //Check for valid inputs
   while (true) {
-    //Attempt to read an integer
-    if (cin >> user_Bank1.apy) {
+    //Attempt to read a double
+    if (cin >> user_Bank1.apy && ususer_Bank1.apy > 0.00) {
         //Successfully read a number so break the loop
         break;
     } else {
@@ -131,8 +131,8 @@ int main() {
   cout<<"(Please enter only a number. Do NOT express as a precentage. Ex. enter 3.50)"<<endl;
     //Check for valid inputs
   while (true) {
-    //Attempt to read an integer
-    if (cin >> user_Bank2.apy) {
+    //Attempt to read a double
+    if (cin >> user_Bank2.apy && ususer_Bank2.apy > 0.00) {
         //Successfully read a number so break the loop
         break;
     } else {
