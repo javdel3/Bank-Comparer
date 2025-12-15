@@ -32,40 +32,37 @@ int main() {
   cout<<endl;
   
   //Get user principle
-  cout << "To begin enter the Principle going to be used to compare between both Banks: "; //Use principle for both banks' calculations
+  cout << "To begin enter the Principle going to be used to compare between both Banks: ";
     //Check for valid inputs
-  while (true) {
-    //Attempt to read a double
+  do {
+    //Attempt to read a double number
     if (cin >> user_principle && user_principle > 0.00) {
-        //Successfully read a number so break the loop
         break;
-    } else {
-        //Input failed
-        cout << "---Invalid input. Please enter only digits.---" << endl;
-
-        //Clear the error flags on the cin stream
-        cin.ignore(numeric_limits<streamsize>::max(), '\n');
-        cin.clear();
     }
-  }
+
+    cout << "---Invalid input. Please enter only positive numbers.---" << endl;
+
+    //Clear the error flags on the cin stream
+    cin.clear();
+    cin.ignore(numeric_limits<streamsize>::max(), '\n');
+  } while (true);
 
   //Get user number of years planning to invest the money
   cout << "Please enter the Number of Years you plan to invest the money: "; //Use years for both banks' calculations
     //Check for valid inputs
-  while (true) {
+  do {
     //Attempt to read an integer
     if (cin >> user_numYearsWithBanks && user_numYearsWithBanks > 0) {
         //Successfully read a number so break the loop
         break;
-    } else {
-        //Input failed
-        cout << "---Invalid input. Please enter only digits.---" << endl;
-
-        //Clear the error flags on the cin stream
-        cin.ignore(numeric_limits<streamsize>::max(), '\n');
-        cin.clear();
     }
-  }
+
+    cout << "---Invalid input. Please enter only positive numbers.---" << endl;
+
+    //Clear the error flags on the cin stream
+    cin.clear();
+    cin.ignore(numeric_limits<streamsize>::max(), '\n');
+  } while (true);
 
   //List of available banks
   cout<<endl;
@@ -92,20 +89,19 @@ int main() {
   cout<<"Enter the APY advertised for " << user_Bank1.name << " :" << endl;
   cout<<"(Please enter only a number. Do NOT express as a precentage. Ex. enter 3.50)"<<endl;
     //Check for valid inputs
-  while (true) {
-    //Attempt to read a double
+  do {
+    //Attempt to read a double number
     if (cin >> user_Bank1.apy && user_Bank1.apy > 0.00) {
         //Successfully read a number so break the loop
         break;
-    } else {
-        //Input failed
-        cout << "---Invalid input. Please enter only digits.---" << endl;
-
-        //Clear the error flags on the cin stream
-        cin.ignore(numeric_limits<streamsize>::max(), '\n');
-        cin.clear();
     }
-  }
+
+    cout << "---Invalid input. Please enter only positive numbers.---" << endl;
+
+    //Clear the error flags on the cin stream
+    cin.clear();
+    cin.ignore(numeric_limits<streamsize>::max(), '\n');
+  } while (true);
   cout << "%" << endl;
   cout<<endl;
   user_Bank1.totalMoneyEarned = CalcMoney(user_Bank1.apy, user_numYearsWithBanks, user_principle); //Calculate for user's Bank 1
@@ -130,20 +126,19 @@ int main() {
   cout<<"Enter the APY advertised for " << user_Bank2.name << " :" << endl;
   cout<<"(Please enter only a number. Do NOT express as a precentage. Ex. enter 3.50)"<<endl;
     //Check for valid inputs
-  while (true) {
-    //Attempt to read a double
+  do {
+    //Attempt to read a double number
     if (cin >> user_Bank2.apy && user_Bank2.apy > 0.00) {
         //Successfully read a number so break the loop
         break;
-    } else {
-        //Input failed
-        cout << "---Invalid input. Please enter only digits.---" << endl;
-
-        //Clear the error flags on the cin stream
-        cin.ignore(numeric_limits<streamsize>::max(), '\n');
-        cin.clear();
     }
-  }
+
+    cout << "---Invalid input. Please enter only positive numbers.---" << endl;
+
+    //Clear the error flags on the cin stream
+    cin.clear();
+    cin.ignore(numeric_limits<streamsize>::max(), '\n');
+  } while (true);
   cout << "%" << endl;
   cout<<endl;
   user_Bank2.totalMoneyEarned = CalcMoney(user_Bank2.apy, user_numYearsWithBanks, user_principle); //Calculate for user's Bank 2

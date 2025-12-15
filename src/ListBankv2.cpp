@@ -28,12 +28,12 @@ void ListBanks() {
 }
 
 bool CheckValidBankName (string user_BankName) {
-    ifstream inFS("UserBankList"); //Specify text file to open
+    ifstream inFS("assests/UserBankList"); //Specify text file to open
     string validBankName;    //Hold the name of the bank being compared as a valid option from the list
 
     //Check if file correctly opened
     if(!inFS.is_open()) {
-        cout<<"Unable to open file"<<endl;
+        cout<<"***Unable to open file***"<<endl;
         return false;
     }
 
