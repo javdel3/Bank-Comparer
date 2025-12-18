@@ -1,8 +1,7 @@
 #include <iostream>
 #include "headers.h"
 #include <string>
-#include <limits> //Library to help check if user correctly input integer
-#include <sstream>
+#include <sstream> //Library to help parse input string and check if user correctly inputted an integer
 using namespace std;
 
 class Bank {
@@ -33,19 +32,20 @@ int main() {
   cout<<endl;
   
   //Get user principle
-  cout << "To begin enter the Principle going to be used to compare between both Banks: $";
+  cout << "To begin enter the Principle you want invest: $";
     //Check for valid inputs
   do {
     //Attempt to read a double number
     getline(cin, input);
-    stringstream ss(input); //Initializes the stream with 'input' string as its input buffer
+    stringstream ss(input); //Create a string stream from 'input' to safely parse and validate numeric input
 
+    //Attempt to extract a positive number from the input string and ensure no extra characters remain
     if(ss >> user_principle && user_principle > 0.00 && ss.eof()) {
         break;
     }
 
     cout << "---Invalid input. Please enter only positive numbers.---" << endl;
-    cout << "To begin enter the Principle going to be used to compare between both Banks: ";
+    cout << "To begin enter the Principle you want invest: ";
 
   } while (true);
   cout<<endl;
@@ -56,7 +56,9 @@ int main() {
   do {
     //Attempt to read an integer
     getline(cin, input);
-    stringstream ss(input); //Initializes the stream with 'input' string as its input buffer
+    stringstream ss(input); //Create a string stream from 'input' to safely parse and validate numeric input
+
+    //Attempt to extract a positive number from the input string and ensure no extra characters remain
     if (ss >> user_numYearsWithBanks && user_numYearsWithBanks > 0 && ss.eof()) {
         //Successfully read a number so break the loop
         break;
@@ -69,7 +71,6 @@ int main() {
   cout<<endl;
 
   //List of available banks
-  cout<<endl;
   ListBanks();
   cout<<endl;
 
@@ -88,6 +89,7 @@ int main() {
 cout<<endl;
 
   //Bank 2 Name
+    //Check valid input
   while (true) {
     cout << "Enter a valid name for bank 2 from the list above: ";
     getline(cin, user_Bank2.name);
@@ -107,7 +109,9 @@ cout<<endl;
   do {
     //Attempt to read a double number
     getline(cin, input);
-    stringstream ss(input); //Initializes the stream with 'input' string as its input buffer
+    stringstream ss(input); //Create a string stream from 'input' to safely parse and validate numeric input
+
+    //Attempt to extract a positive number from the input string and ensure no extra characters remain
     if (ss >> user_Bank1.apy && user_Bank1.apy > 0.00 && ss.eof()) {
         //Successfully read a number so break the loop
         break;
@@ -131,8 +135,9 @@ cout<<endl;
   do {
     //Attempt to read a double number
     getline(cin, input);
-    stringstream ss(input); //Initializes the stream with 'input' string as its input buffer
-
+    stringstream ss(input); //Create a string stream from 'input' to safely parse and validate numeric input
+    
+    //Attempt to extract a positive number from the input string and ensure no extra characters remain
     if (ss >> user_Bank2.apy && user_Bank2.apy > 0.00 && ss.eof()) {
         //Successfully read a number so break the loop
         break;

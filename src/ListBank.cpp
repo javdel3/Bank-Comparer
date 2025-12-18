@@ -37,6 +37,7 @@ bool CheckValidBankName (string user_BankName) {
         return false;
     }
 
+    //Compare user input to each line in Bank List test doc
     while(getline(inFS, validBankName)) {
         if(user_BankName == validBankName) {
             return true;
