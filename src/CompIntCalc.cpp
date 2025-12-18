@@ -73,7 +73,7 @@ double CalcMoney(double apy, int userCompYears, double principle) {
     //Display the total money
     cout << fixed << setprecision(2);
     cout << "Total Money after " << userCompYears << " years: $" << result << endl;
-    cout << "Interest earned after " << userCompYears << "years: $" << result - principle << endl;
+    cout << "Interest earned after " << userCompYears << " years: $" << result - principle << endl;
 
     return result;
 }

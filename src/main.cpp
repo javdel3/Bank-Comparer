@@ -88,7 +88,7 @@ int main() {
 
   
   //Bank 1 APY
-  cout<<"Enter the APY advertised for " << user_Bank1.name << " :" << endl;
+  cout<<"Enter the APY advertised for " << user_Bank1.name << ":" << endl;
   cout<<"(Please enter only a number. Do NOT express as a precentage. Ex. enter 3.50)"<<endl;
     //Check for valid inputs
   do {
@@ -108,22 +108,19 @@ int main() {
   cout << "%" << endl;
   cout<<endl;
   user_Bank1.totalMoneyEarned = CalcMoney(user_Bank1.apy, user_numYearsWithBanks, user_principle); //Calculate for user's Bank 1
+  cout<<endl;
 
   //Bank 2 Name
-  cout<<"Enter a valid name for bank 2 from the list above: ";
-  cin>>user_Bank2.name;
-  isValidBankName = CheckValidBankName(user_Bank2.name);
-    //Check valid input
-  while(true) {
-    if(!isValidBankName) {
-      cout<<"Enter a valid name for bank 2 from the list above: ";
-      cin >> user_Bank2.name;
+  while (true) {
+    cout << "Enter a valid name for bank 2 from the list above: ";
+    getline(cin, user_Bank2.name);
+
+    if (CheckValidBankName(user_Bank2.name)) {
+        break;
     }
-    else {
-      break;
-    }
-    isValidBankName = CheckValidBankName(user_Bank2.name);
-  }
+
+    cout << "---Invalid bank name. Please try again.---" << endl;
+}
   
   //Bank 2 APY
   cout<<"Enter the APY advertised for " << user_Bank2.name << " :" << endl;
@@ -147,6 +144,7 @@ int main() {
   cout << "%" << endl;
   cout<<endl;
   user_Bank2.totalMoneyEarned = CalcMoney(user_Bank2.apy, user_numYearsWithBanks, user_principle); //Calculate for user's Bank 2
+  cout<<endl;
 
   //Compare Banks' Results
   if(user_Bank2.totalMoneyEarned > user_Bank1.totalMoneyEarned) {
