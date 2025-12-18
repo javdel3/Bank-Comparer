@@ -89,7 +89,6 @@ int main() {
   //Bank 2 Name
   while (true) {
     cout << "Enter a valid name for bank 2 from the list above: ";
-    cin.ignore(numeric_limits<streamsize>::max(), '\n'); //clear the newline first
     getline(cin, user_Bank2.name);
 
     if (CheckValidBankName(user_Bank2.name)) {
@@ -98,6 +97,7 @@ int main() {
 
     cout << "---Invalid bank name. Please try again.---" << endl;
 }
+cout<<endl;
   
   //Bank 1 APY
   cout<<"Enter the APY advertised for " << user_Bank1.name << ":" << endl;
