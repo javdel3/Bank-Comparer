@@ -86,6 +86,18 @@ int main() {
     cout << "---Invalid bank name. Please try again.---" << endl;
 }
 
+  //Bank 2 Name
+  while (true) {
+    cout << "Enter a valid name for bank 2 from the list above: ";
+    cin.ignore(numeric_limits<streamsize>::max(), '\n'); //clear the newline first
+    getline(cin, user_Bank2.name);
+
+    if (CheckValidBankName(user_Bank2.name)) {
+        break;
+    }
+
+    cout << "---Invalid bank name. Please try again.---" << endl;
+}
   
   //Bank 1 APY
   cout<<"Enter the APY advertised for " << user_Bank1.name << ":" << endl;
@@ -105,27 +117,7 @@ int main() {
     cout<<"(Please enter only a number. Do NOT express as a precentage. Ex. enter 3.50)"<<endl;
 
   } while (true);
-  cout << "%" << endl;
   cout<<endl;
-  user_Bank1.totalMoneyEarned = CalcMoney(user_Bank1.apy, user_numYearsWithBanks, user_principle); //Calculate for user's Bank 1
-  cout<<endl;
-
-  //List of available banks AGAIN
-  cout<<endl;
-  ListBanks();
-  cout<<endl;
-
-  //Bank 2 Name
-  while (true) {
-    cout << "Enter a valid name for bank 2 from the list above: ";
-    getline(cin, user_Bank2.name);
-
-    if (CheckValidBankName(user_Bank2.name)) {
-        break;
-    }
-
-    cout << "---Invalid bank name. Please try again.---" << endl;
-}
   
   //Bank 2 APY
   cout<<"Enter the APY advertised for " << user_Bank2.name << " :" << endl;
@@ -146,8 +138,13 @@ int main() {
     cout<<"(Please enter only a number. Do NOT express as a precentage. Ex. enter 3.50)"<<endl;
 
   } while (true);
-  cout << "%" << endl;
   cout<<endl;
+
+  //Compute results for both banks
+    //Bank 1
+  user_Bank1.totalMoneyEarned = CalcMoney(user_Bank1.apy, user_numYearsWithBanks, user_principle); //Calculate for user's Bank 1
+  cout<<endl;
+    //Bank 2
   user_Bank2.totalMoneyEarned = CalcMoney(user_Bank2.apy, user_numYearsWithBanks, user_principle); //Calculate for user's Bank 2
   cout<<endl;
 
