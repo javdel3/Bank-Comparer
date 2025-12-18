@@ -5,12 +5,12 @@
 using namespace std;
 
 void ListBanks() {
-    ifstream inFS("UserBankList"); //Specify text file to open
+    ifstream inFS("assets/UserBankList"); //Specify text file to open
     string currentBank;    //Hold the name of the current bank being displayed from the file
 
     //Check if file correctly opened
     if(!inFS.is_open()) {
-        cout<<"Unable to open file"<<endl;
+        cout<<"***Unable to open file***"<<endl;
         return;
     }
 
@@ -28,7 +28,7 @@ void ListBanks() {
 }
 
 bool CheckValidBankName (string user_BankName) {
-    ifstream inFS("assests/UserBankList"); //Specify text file to open
+    ifstream inFS("assets/UserBankList"); //Specify text file to open
     string validBankName;    //Hold the name of the bank being compared as a valid option from the list
 
     //Check if file correctly opened

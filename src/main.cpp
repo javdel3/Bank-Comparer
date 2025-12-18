@@ -72,20 +72,24 @@ int main() {
   cout<<endl;
 
   //Bank 1 Name
-  cout<<"Enter a valid name for bank 1 from the list above: ";
-  cin>>user_Bank1.name;
-  isValidBankName = CheckValidBankName(user_Bank1.name);
+  // cout<<"Enter a valid name for bank 1 from the list above: ";
+  // cin>>user_Bank1.name;
+  // isValidBankName = CheckValidBankName(user_Bank1.name);
     //Check valid input
-  while(true) {
-    if(!isValidBankName) {
-      cout<<"Enter a valid name for bank 1 from the list above: ";
-      cin >> user_Bank1.name;
+  while (true) {
+    cout << "Enter a valid name for bank 1 from the list above: ";
+    cin >> user_Bank1.name;
+    //debug
+    cout << "Comparing [" << user_BankName << "] with [" << validBankName << "]" << endl;
+
+
+    if (CheckValidBankName(user_Bank1.name)) {
+        break; // valid input → move on
     }
-    else {
-      break;
-    }
-    isValidBankName = CheckValidBankName(user_Bank1.name);
-  }
+
+    cout << "---Invalid bank name. Please try again.---" << endl;
+}
+
   
   //Bank 1 APY
   cout<<"Enter the APY advertised for " << user_Bank1.name << " :" << endl;
