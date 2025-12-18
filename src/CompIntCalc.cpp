@@ -68,7 +68,7 @@ double CalcMoney(double apy, int userCompYears, double principle) {
     }
     
     //Formula to calculate total money
-    result = principle * pow((1 + apy / compFreqNum), compFreqNum * userCompYears); 
+    result = principle * pow((1 + ((apy/100) / compFreqNum)), compFreqNum * userCompYears); 
 
     //Display the total money
     cout << fixed << setprecision(2);

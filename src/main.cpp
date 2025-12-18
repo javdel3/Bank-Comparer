@@ -33,7 +33,7 @@ int main() {
   cout<<endl;
   
   //Get user principle
-  cout << "To begin enter the Principle going to be used to compare between both Banks: ";
+  cout << "To begin enter the Principle going to be used to compare between both Banks: $";
     //Check for valid inputs
   do {
     //Attempt to read a double number
@@ -108,6 +108,11 @@ int main() {
   cout << "%" << endl;
   cout<<endl;
   user_Bank1.totalMoneyEarned = CalcMoney(user_Bank1.apy, user_numYearsWithBanks, user_principle); //Calculate for user's Bank 1
+  cout<<endl;
+
+  //List of available banks AGAIN
+  cout<<endl;
+  ListBanks();
   cout<<endl;
 
   //Bank 2 Name
