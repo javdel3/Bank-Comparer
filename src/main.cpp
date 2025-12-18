@@ -85,6 +85,7 @@ int main() {
 
     cout << "---Invalid bank name. Please try again.---" << endl;
 }
+cout<<endl;
 
   //Bank 2 Name
   while (true) {
@@ -118,9 +119,13 @@ cout<<endl;
 
   } while (true);
   cout<<endl;
+
+  //Bank 1 interest earned calculation
+  user_Bank1.totalMoneyEarned = CalcMoney(user_Bank1.apy, user_numYearsWithBanks, user_principle); //Calculate for user's Bank 1
+  cout<<endl;
   
   //Bank 2 APY
-  cout<<"Enter the APY advertised for " << user_Bank2.name << " :" << endl;
+  cout<<"Enter the APY advertised for " << user_Bank2.name << ":" << endl;
   cout<<"(Please enter only a number. Do NOT express as a precentage. Ex. enter 3.50)"<<endl;
     //Check for valid inputs
   do {
@@ -128,7 +133,7 @@ cout<<endl;
     getline(cin, input);
     stringstream ss(input); //Initializes the stream with 'input' string as its input buffer
 
-    if (cin >> user_Bank2.apy && user_Bank2.apy > 0.00) {
+    if (ss >> user_Bank2.apy && user_Bank2.apy > 0.00 && ss.eof()) {
         //Successfully read a number so break the loop
         break;
     }
@@ -140,11 +145,7 @@ cout<<endl;
   } while (true);
   cout<<endl;
 
-  //Compute results for both banks
-    //Bank 1
-  user_Bank1.totalMoneyEarned = CalcMoney(user_Bank1.apy, user_numYearsWithBanks, user_principle); //Calculate for user's Bank 1
-  cout<<endl;
-    //Bank 2
+  //Bank 2 interest calculation
   user_Bank2.totalMoneyEarned = CalcMoney(user_Bank2.apy, user_numYearsWithBanks, user_principle); //Calculate for user's Bank 2
   cout<<endl;
 

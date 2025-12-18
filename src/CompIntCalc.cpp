@@ -30,7 +30,7 @@ double CalcMoney(double apy, int userCompYears, double principle) {
 
         //User enters selection
         cout<<"Enter Selection: ";
-        cin>>compFreq;
+        getline(cin, compFreq); //Change from cin to getline so properly clears values in cin
         cout<<endl;
         
         if(compFreq == "Daily") {
